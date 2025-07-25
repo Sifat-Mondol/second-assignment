@@ -1,0 +1,856 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #F0F2F5; /* This color is used for the body, but other elements override it. Keeping for consistency. */
+    background-color: #F8F8F8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar a.homebg {
+    color: #252432;
+}
+.navbar a.shopbg {
+    color: #8987A1;
+}
+.navbar a.aboutbg {
+    color: #8987A1;
+}
+.navbar a.cartbg {
+    color: #000000;
+}
+
+.btn-shop-now, .btn-subscribe {
+    background-color: #E86B02;
+    color: #FFFFFF;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-shop-now-secondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333333;
+    font-weight: 700;
+}
+
+.section-heading .highlight {
+    color: #E86B02;
+}
+
+.section-subheading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: #666666;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+.main-header {
+    background-color: #F0F2F5;
+    padding: 15px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar ul li a {
+    font-weight: 500;
+    color: #555555;
+    font-size: 1.05em;
+    padding-bottom: 5px;
+}
+
+.navbar ul li a.active {
+    color: #E86B02;
+    border-bottom: 2px solid #E86B02;
+}
+
+.hero-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 5rem;
+    background-color: #f7f7f7;
+    padding: 50px 25px;
+    border-radius: 5px;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 350px;
+    max-width: 600px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.hero-tagline {
+    font-size: 3.5em;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.hero-tagline .always-text {
+    color: #333333;
+}
+
+.hero-tagline .fresh-text,
+.hero-tagline .flowers-text {
+    color: #E86B02;
+}
+
+.hero-tagline .flowers-text {
+    display: block;
+}
+
+.hero-description {
+    font-size: 1.1em;
+    color: #666666;
+    margin-top: auto;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.our-plants-section {
+    padding: 90px 25px;
+    text-align: center;
+    background-color: #F8F8F8;
+}
+
+.section-heading{
+    color: #333333; /* Corrected to match initial .section-heading color */
+}
+.plants-section {
+    padding: 60px 25px;
+    background-color: #2b2b2b; /* This class is not used in the HTML */
+}
+
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plant-card {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.plant-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+.plant-card h3 {
+    font-family: 'Poppins', sans-serif; /* Changed from Arial to Poppins for consistency */
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #333333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-display {
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-add-to-cart {
+    background-color: #E86B02;
+    color: #FFFFFF;
+    padding: 15px 0;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.plant-card .starting-from {
+    display: none; /* This class is not used in the HTML, keeping it as is */
+}
+
+.flower-lover-section {
+    padding: 60px 25px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* This makes the section take full viewport height, consider if always desired */
+}
+
+.flower-lover-content-box {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative; /* Crucial for positioning the trusted badge */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Changed from visible to hidden to contain badge if it overflows */
+    min-height: 500px;
+}
+
+.flower-lover-image-wrap {
+    position: relative;
+    flex: 1;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 12px 0 0 12px;
+}
+
+.flower-lover-image-wrap img:first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px 0 0 12px;
+}
+
+.image-gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(139, 69, 19, 0.2), transparent); /* This color is brown, not sure if intended */
+    pointer-events: none;
+}
+
+/* Trusted Badge Animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.trusted-seller-badge {
+    position: absolute;
+    top: -85px; /* Adjust as needed */
+    right: -85px; /* Position relative to the top-right corner of the parent */
+    width: 250px;
+    height: 250px;
+    z-index: 1001;
+    animation: spin 5s linear infinite; /* Added animation */
+}
+
+.flower-lover-text-content {
+    flex: 1.3;
+    padding: 70px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    position: relative;
+    border-radius: 0 12px 12px 0;
+}
+
+.flower-lover-title {
+    font-family: 'Playfair Display', serif; /* Changed from Georgia to Playfair Display for consistency */
+    font-size: 2.6rem;
+    color: #2c3e50;
+    margin-bottom: 35px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 30px;
+}
+
+.flower-lover-text-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flower-lover-text-content ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 22px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #6c757d;
+    font-family: 'Poppins', sans-serif; /* Changed from Arial to Poppins for consistency */
+}
+
+.flower-lover-text-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #d4af37; /* Gold-like color */
+    font-size: 1.3em;
+    line-height: 1.3;
+}
+
+@media (max-width: 992px) {
+    .flower-lover-content-box {
+        flex-direction: column;
+        text-align: center; /* This centers the text content for the entire box */
+    }
+
+    .flower-lover-image-wrap,
+    .flower-lover-text-content {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .flower-lover-image-wrap {
+        height: 350px;
+        border-radius: 12px 12px 0 0; /* Adjust border-radius for column layout */
+    }
+
+    .trusted-seller-badge {
+        display: none; /* Hide badge on mobile */
+    }
+
+    .flower-lover-text-content {
+        padding: 40px;
+        align-items: center;
+        border-radius: 0 0 12px 12px; /* Adjust border-radius for column layout */
+    }
+
+    .flower-lover-title {
+        font-size: 2.2em;
+    }
+
+    .flower-lover-text-content ul {
+        padding-left: 0;
+        text-align: left; /* Keep list items left aligned */
+        width: 100%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .flower-lover-text-content ul li {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .flower-lover-section {
+        padding: 60px 15px;
+    }
+
+    .flower-lover-content-box {
+        border-radius: 5px;
+    }
+
+    .flower-lover-image-wrap {
+        height: 250px;
+    }
+
+    .flower-lover-title {
+        font-size: 2em;
+    }
+
+    .flower-lover-text-content {
+        padding: 30px 20px;
+    }
+
+    .flower-lover-text-content ul li {
+        font-size: 0.95em;
+        margin-bottom: 15px;
+    }
+}
+
+.latest-deals-section {
+    padding: 90px 25px;
+    text-align: center;
+    background-color: #F8F8F8;
+}
+
+.deals-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default for smaller desktops before larger breakpoint */
+    grid-template-rows: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.deal-card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #F0F2F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.deal-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 900px) {
+    .deals-grid-container {
+        grid-template-columns: 1.2fr 2fr;
+        grid-template-rows: repeat(2, minmax(220px, 1fr));
+        grid-template-areas:
+            "small-1 large-deal"
+            "small-2 large-deal";
+    }
+    .deal-card.large-deal {
+        grid-area: large-deal;
+    }
+    .deal-card.small-1 {
+        grid-area: small-1;
+    }
+    .deal-card.small-2 {
+        grid-area: small-2;
+    }
+}
+
+.deal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.deal-overlay .deal-discount {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.deal-overlay .deal-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.join-bunch-section {
+    position: relative;
+    background-image: url('../assets/news-letter-bg.png') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.join-bunch-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.join-bunch-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1em;
+    color: #333333;
+    background-color: #FFFFFF;
+    min-width: 250px;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #888888;
+}
+
+.btn-subscribe {
+    background-color: #E86B02;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-subscribe:hover {
+    background-color: #c75a00;
+}
+
+.main-footer {
+    background-color: #FFFFFF; /* Changed to white as per original style */
+    color: #6B7280;
+    padding: 60px 25px 30px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #DDDDDD; /* Lighter border for white background */
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    /* Removed center justify/align as content is typically left aligned in columns */
+}
+.footer-about{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-about img {
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+.footer-about p {
+    font-size: 0.95em;
+    line-height: 1.8;
+    color: #6B7280; /* Ensure text color is visible on white background */
+}
+
+.footer-col h3 {
+    color: #333333; /* Darker color for headings on white background */
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    font-size: 0.95em;
+    color: #6B7280;
+}
+
+.social-icons a {
+    color: #6B7280;
+    font-size: 1.6em;
+    margin-right: 18px;
+    display: inline-block; /* Changed to inline-block for proper spacing */
+}
+.social-icons{
+    margin-top: 25px; /* Adjust margin as per Figma, was very high */
+    margin-bottom: 0; /* Remove bottom margin if not needed */
+    display: flex; /* Make icons flex container to align */
+    justify-content: flex-start; /* Align to start for desktop */
+}
+
+@media (max-width: 1100px) {
+    .header-container {
+        padding: 0 15px;
+    }
+    .hero-section {
+        padding: 80px 30px;
+        gap: 40px;
+    }
+    .hero-content h1 {
+        font-size: 3.8em;
+    }
+    .flower-lover-content-box {
+        flex-direction: column;
+        /* text-align: center; */ /* Removed to keep content left aligned */
+    }
+    .flower-lover-image-wrap {
+        height: 380px;
+    }
+    .flower-lover-text-content {
+        padding: 40px;
+    }
+    .deals-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: unset;
+    }
+    .deal-card.large-deal,
+    .deal-card.small-1,
+    .deal-card.small-2 {
+        grid-area: unset;
+        height: 250px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        display: none;
+    }
+    .header-right {
+        margin-left: auto;
+        gap: 15px;
+    }
+    .search-bar { /* This class is not in your HTML */
+        padding: 4px 8px;
+    }
+    .search-bar input { /* This class is not in your HTML */
+        width: 90px;
+        font-size: 0.9em;
+    }
+    .search-bar .fa-search { /* This class is not in your HTML */
+        font-size: 0.85em;
+    }
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: left; /* Changed to left for content alignment */
+        padding: 60px 20px;
+    }
+    .hero-content {
+        min-width: unset;
+        max-width: 100%;
+        margin-right: 0; /* Remove margin-right from hero-content on mobile */
+    }
+    .hero-tagline { /* Changed from h1 to tagline */
+        font-size: 3em;
+    }
+    .hero-description {
+        font-size: 1em;
+        margin-bottom: 30px;
+        text-align: left; /* Ensure description is left aligned */
+    }
+    .hero-image {
+        min-width: unset;
+        margin-bottom: 30px;
+    }
+    .section-heading {
+        font-size: 2.2em;
+    }
+    .section-subheading {
+        font-size: 0.95em;
+        margin-bottom: 40px;
+    }
+    .plants-grid {
+        grid-template-columns: repeat(2, 1fr); /* Explicitly 2 columns for mobile */
+        gap: 25px;
+    }
+    .plant-img-wrapper {
+        height: 160px;
+    }
+    .plant-card h3 {
+        font-size: 1.3em;
+    }
+    .plant-price-cart .price { /* This class is not in your HTML */
+        font-size: 1.2em;
+    }
+    .btn-add-to-cart {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+    .flower-lover-image-wrap {
+        height: 300px;
+    }
+    .trusted-seller-badge {
+        display: none; /* Already handled above, ensuring it's hidden */
+    }
+    .flower-lover-text-content {
+        padding: 30px;
+    }
+    .flower-lover-title {
+        font-size: 2.2em;
+        text-align: center; /* Center title in mobile context */
+    }
+    .flower-lover-text-content ul li {
+        font-size: 1em;
+        padding-left: 25px;
+        margin-bottom: 15px;
+    }
+    .deal-overlay .deal-discount {
+        font-size: 2.2em;
+    }
+    .deal-overlay .deal-name { /* This class is not in your HTML */
+        font-size: 1.4em;
+    }
+    .btn-shop-now-secondary {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    .join-bunch-section {
+        padding: 80px 20px;
+    }
+    .join-bunch-heading {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .newsletter-form input[type="email"] {
+        max-width: 90%;
+        padding: 12px 20px;
+    }
+    .btn-subscribe {
+        padding: 12px 25px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    .footer-col {
+        min-width: unset;
+        width: 100%;
+        align-items: center; /* Center align footer column content for mobile */
+    }
+    .footer-about {
+        align-items: center; /* Center logo and text in about column */
+    }
+    .footer-col ul {
+        padding: 0;
+    }
+    .footer-col h3 {
+        margin-bottom: 15px;
+    }
+    .social-icons {
+        justify-content: center; /* Center align social icons for mobile */
+    }
+}
+
+@media (max-width: 580px) {
+    .header-right { /* This class is not in your HTML */
+        gap: 10px;
+    }
+    .search-bar input { /* This class is not in your HTML */
+        width: 70px;
+    }
+    .hero-tagline { /* Changed from h1 to tagline */
+        font-size: 2.5em;
+    }
+    .section-heading {
+        font-size: 1.8em;
+    }
+    .flower-lover-title {
+        font-size: 1.9em;
+    }
+    .join-bunch-heading {
+        font-size: 2em;
+    }
+}
