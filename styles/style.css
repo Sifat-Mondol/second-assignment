@@ -7,7 +7,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #F0F2F5; /* This color is used for the body, but other elements override it. Keeping for consistency. */
+    color: #F0F2F5;
     background-color: #F8F8F8;
 }
 
@@ -184,11 +184,11 @@ ul {
 }
 
 .section-heading{
-    color: #333333; /* Corrected to match initial .section-heading color */
+    color: #333333;
 }
 .plants-section {
     padding: 60px 25px;
-    background-color: #2b2b2b; /* This class is not used in the HTML */
+    background-color: #2b2b2b;
 }
 
 .plants-grid {
@@ -216,7 +216,7 @@ ul {
 }
 
 .plant-card h3 {
-    font-family: 'Poppins', sans-serif; /* Changed from Arial to Poppins for consistency */
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     margin-top: 20px;
     margin-bottom: 5px;
@@ -254,7 +254,7 @@ ul {
 }
 
 .plant-card .starting-from {
-    display: none; /* This class is not used in the HTML, keeping it as is */
+    display: none;
 }
 
 .flower-lover-section {
@@ -263,7 +263,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* This makes the section take full viewport height, consider if always desired */
+    min-height: 100vh;
 }
 
 .flower-lover-content-box {
@@ -273,9 +273,9 @@ ul {
     max-width: 1100px;
     width: 100%;
     margin: 0 auto;
-    position: relative; /* Crucial for positioning the trusted badge */
+    position: relative;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Changed from visible to hidden to contain badge if it overflows */
+    overflow: visible; /* Reverted to visible for badge to show outside */
     min-height: 500px;
 }
 
@@ -301,7 +301,7 @@ ul {
     left: 0;
     width: 100%;
     height: 30%;
-    background: linear-gradient(to top, rgba(139, 69, 19, 0.2), transparent); /* This color is brown, not sure if intended */
+    background: linear-gradient(to top, rgba(139, 69, 19, 0.2), transparent);
     pointer-events: none;
 }
 
@@ -313,8 +313,8 @@ ul {
 
 .trusted-seller-badge {
     position: absolute;
-    top: -85px; /* Adjust as needed */
-    right: -85px; /* Position relative to the top-right corner of the parent */
+    top: -85px; /* Original value */
+    right: 560px; /* Original value - reverted */
     width: 250px;
     height: 250px;
     z-index: 1001;
@@ -333,7 +333,7 @@ ul {
 }
 
 .flower-lover-title {
-    font-family: 'Playfair Display', serif; /* Changed from Georgia to Playfair Display for consistency */
+    font-family: 'Playfair Display', serif;
     font-size: 2.6rem;
     color: #2c3e50;
     margin-bottom: 35px;
@@ -355,7 +355,7 @@ ul {
     font-size: 1rem;
     line-height: 1.7;
     color: #6c757d;
-    font-family: 'Poppins', sans-serif; /* Changed from Arial to Poppins for consistency */
+    font-family: 'Poppins', sans-serif;
 }
 
 .flower-lover-text-content ul li::before {
@@ -363,7 +363,7 @@ ul {
     position: absolute;
     left: 0;
     top: 0;
-    color: #d4af37; /* Gold-like color */
+    color: #d4af37;
     font-size: 1.3em;
     line-height: 1.3;
 }
@@ -371,7 +371,7 @@ ul {
 @media (max-width: 992px) {
     .flower-lover-content-box {
         flex-direction: column;
-        text-align: center; /* This centers the text content for the entire box */
+        /* text-align: center; */ /* Removed to keep content left aligned, handled per element */
     }
 
     .flower-lover-image-wrap,
@@ -382,7 +382,7 @@ ul {
 
     .flower-lover-image-wrap {
         height: 350px;
-        border-radius: 12px 12px 0 0; /* Adjust border-radius for column layout */
+        border-radius: 12px 12px 0 0;
     }
 
     .trusted-seller-badge {
@@ -391,20 +391,21 @@ ul {
 
     .flower-lover-text-content {
         padding: 40px;
-        align-items: center;
-        border-radius: 0 0 12px 12px; /* Adjust border-radius for column layout */
+        align-items: flex-start; /* Changed to flex-start to left-align all content */
+        border-radius: 0 0 12px 12px;
     }
 
     .flower-lover-title {
         font-size: 2.2em;
+        text-align: left; /* Ensure title is left-aligned on mobile */
     }
 
     .flower-lover-text-content ul {
         padding-left: 0;
-        text-align: left; /* Keep list items left aligned */
+        text-align: left;
         width: 100%;
         max-width: 500px;
-        margin-left: auto;
+        margin-left: 0; /* Align to left edge */
         margin-right: auto;
     }
 
@@ -448,7 +449,7 @@ ul {
 
 .deals-grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default for smaller desktops before larger breakpoint */
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, minmax(220px, 1fr));
     gap: 20px;
     max-width: 1200px;
@@ -599,7 +600,7 @@ ul {
 }
 
 .main-footer {
-    background-color: #FFFFFF; /* Changed to white as per original style */
+    background-color: #FFFFFF;
     color: #6B7280;
     padding: 60px 25px 30px;
 }
@@ -612,13 +613,12 @@ ul {
     margin: 0 auto;
     gap: 40px;
     padding-bottom: 40px;
-    border-bottom: 1px solid #DDDDDD; /* Lighter border for white background */
+    border-bottom: 1px solid #DDDDDD;
 }
 
 .footer-col {
     flex: 1;
     min-width: 200px;
-    /* Removed center justify/align as content is typically left aligned in columns */
 }
 .footer-about{
     display: flex;
@@ -633,11 +633,11 @@ ul {
 .footer-about p {
     font-size: 0.95em;
     line-height: 1.8;
-    color: #6B7280; /* Ensure text color is visible on white background */
+    color: #6B7280;
 }
 
 .footer-col h3 {
-    color: #333333; /* Darker color for headings on white background */
+    color: #333333;
     font-size: 1.4em;
     margin-bottom: 25px;
     font-weight: 600;
@@ -656,13 +656,13 @@ ul {
     color: #6B7280;
     font-size: 1.6em;
     margin-right: 18px;
-    display: inline-block; /* Changed to inline-block for proper spacing */
+    display: inline-block;
 }
 .social-icons{
-    margin-top: 25px; /* Adjust margin as per Figma, was very high */
-    margin-bottom: 0; /* Remove bottom margin if not needed */
-    display: flex; /* Make icons flex container to align */
-    justify-content: flex-start; /* Align to start for desktop */
+    margin-top: 25px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 @media (max-width: 1100px) {
@@ -678,7 +678,6 @@ ul {
     }
     .flower-lover-content-box {
         flex-direction: column;
-        /* text-align: center; */ /* Removed to keep content left aligned */
     }
     .flower-lover-image-wrap {
         height: 380px;
@@ -707,33 +706,33 @@ ul {
         margin-left: auto;
         gap: 15px;
     }
-    .search-bar { /* This class is not in your HTML */
+    .search-bar {
         padding: 4px 8px;
     }
-    .search-bar input { /* This class is not in your HTML */
+    .search-bar input {
         width: 90px;
         font-size: 0.9em;
     }
-    .search-bar .fa-search { /* This class is not in your HTML */
+    .search-bar .fa-search {
         font-size: 0.85em;
     }
     .hero-section {
         flex-direction: column-reverse;
-        text-align: left; /* Changed to left for content alignment */
+        text-align: left;
         padding: 60px 20px;
     }
     .hero-content {
         min-width: unset;
         max-width: 100%;
-        margin-right: 0; /* Remove margin-right from hero-content on mobile */
+        margin-right: 0;
     }
-    .hero-tagline { /* Changed from h1 to tagline */
+    .hero-tagline {
         font-size: 3em;
     }
     .hero-description {
         font-size: 1em;
         margin-bottom: 30px;
-        text-align: left; /* Ensure description is left aligned */
+        text-align: left;
     }
     .hero-image {
         min-width: unset;
@@ -747,7 +746,7 @@ ul {
         margin-bottom: 40px;
     }
     .plants-grid {
-        grid-template-columns: repeat(2, 1fr); /* Explicitly 2 columns for mobile */
+        grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
     .plant-img-wrapper {
@@ -756,7 +755,7 @@ ul {
     .plant-card h3 {
         font-size: 1.3em;
     }
-    .plant-price-cart .price { /* This class is not in your HTML */
+    .plant-price-cart .price {
         font-size: 1.2em;
     }
     .btn-add-to-cart {
@@ -767,14 +766,14 @@ ul {
         height: 300px;
     }
     .trusted-seller-badge {
-        display: none; /* Already handled above, ensuring it's hidden */
+        display: none;
     }
     .flower-lover-text-content {
         padding: 30px;
     }
     .flower-lover-title {
         font-size: 2.2em;
-        text-align: center; /* Center title in mobile context */
+        text-align: left; /* Ensure title is left-aligned on mobile */
     }
     .flower-lover-text-content ul li {
         font-size: 1em;
@@ -784,7 +783,7 @@ ul {
     .deal-overlay .deal-discount {
         font-size: 2.2em;
     }
-    .deal-overlay .deal-name { /* This class is not in your HTML */
+    .deal-overlay .deal-name {
         font-size: 1.4em;
     }
     .btn-shop-now-secondary {
@@ -812,16 +811,16 @@ ul {
     }
     .footer-container {
         flex-direction: column;
-        text-align: center;
         gap: 25px;
     }
     .footer-col {
         min-width: unset;
         width: 100%;
-        align-items: center; /* Center align footer column content for mobile */
+        align-items: flex-start; /* Ensure left alignment */
+        text-align: left; /* Ensure text is left aligned */
     }
     .footer-about {
-        align-items: center; /* Center logo and text in about column */
+        align-items: flex-start; /* Ensure left alignment for logo and text */
     }
     .footer-col ul {
         padding: 0;
@@ -830,18 +829,18 @@ ul {
         margin-bottom: 15px;
     }
     .social-icons {
-        justify-content: center; /* Center align social icons for mobile */
+        justify-content: flex-start; /* Ensure left alignment for social icons */
     }
 }
 
 @media (max-width: 580px) {
-    .header-right { /* This class is not in your HTML */
+    .header-right {
         gap: 10px;
     }
-    .search-bar input { /* This class is not in your HTML */
+    .search-bar input {
         width: 70px;
     }
-    .hero-tagline { /* Changed from h1 to tagline */
+    .hero-tagline {
         font-size: 2.5em;
     }
     .section-heading {
